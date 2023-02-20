@@ -41,7 +41,10 @@ export default function MainLayout({ children }: { children: React.ReactElement 
             // .then(res => res.json())
             .then(data => {
                 // console.log("stock market details.", data);
-                setStockMarketDetails(data.data);
+                if ('data' in data && Array.isArray(data.data)){
+                    // @ts-ignore: Unreachable code error
+                    setStockMarketDetails(data.data);
+                }
             })
             .catch((err) => console.log(`Fetching stack market details failed. Error:- ${err}`));
     }, []);
