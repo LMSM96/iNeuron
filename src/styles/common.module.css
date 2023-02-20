@@ -1,0 +1,11 @@
+
+.variable-text a {
+    --tw-text-opacity: 1;
+    color: rgb(99 102 241/var(--tw-text-opacity));
+}
+.tag-green {
+    @apply bg-green-100 text-green-800 inline-flex rounded-full px-2 text-xs font-semibold leading-5
+}
+.tag-red {
+    @apply bg-red-100 text-red-800 inline-flex rounded-full px-2 text-xs font-semibold leading-5
+}
